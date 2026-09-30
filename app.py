@@ -63,7 +63,9 @@ def build_prompt(mode: str, text: str, o: dict) -> str:
     elif mode == "quiz":
         task = (
             f"Create {o['n']} {o['difficulty']} multiple-choice questions from the notes below.\n"
-            "Each question has options A-D with exactly one correct answer.\n"
+            "Each question has options A-D with exactly one correct answer. Do not write an introduction.\n"
+            "Format each question as a bold line like **Q1. question text**, then the four options as a Markdown "
+            "bullet list with one option per line (- A) ...), and a blank line between questions.\n"
             f"Print all questions first, then a line containing exactly {ANSWER_MARK}, "
             "then the answer key (correct letter + one-line explanation)."
         )
