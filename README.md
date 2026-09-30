@@ -76,10 +76,10 @@ git clone https://github.com/Aditya-timekiller/shadowfox-begineer.git
 cd shadowfox-begineer
 
 python -m venv venv
-venv\Scripts\activate            # Mac/Linux: source venv/bin/activate
+venv\Scripts\activate            
 pip install -r requirements.txt
 
-copy .env.example .env           # Mac/Linux: cp .env.example .env
+copy .env.example .env           
 streamlit run app.py
 ```
 
